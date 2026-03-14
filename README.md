@@ -3,20 +3,11 @@
 </p>
 
 <h1 align="center">
-Autonomous Portable Water Quality Monitoring Robot
+Automated Functionality Detection System for Outdoor Advertising
 </h1>
 
 <p align="center">
-An IoT-based autonomous robotic system designed for real-time water quality monitoring and environmental analysis.
-</p>
-
-<p align="center">
-
-![IoT](https://img.shields.io/badge/Project-IoT-blue)
-![ESP32](https://img.shields.io/badge/Microcontroller-ESP32-red)
-![MQTT](https://img.shields.io/badge/Protocol-MQTT-green)
-![React](https://img.shields.io/badge/Dashboard-React-blueviolet)
-
+An IoT-based monitoring system designed to detect power and operational faults in outdoor advertising panels in real time.
 </p>
 
 ---
@@ -33,24 +24,13 @@ This project was developed as part of **Industrial Training under the Department
 
 ---
 
-# Parameters Measured
-
-- Total Dissolved Solids (TDS)
-- Water Temperature
-- Ambient Humidity
-- Electrical Conductivity
-- Water Hardness
-- Water Quality Index
-
----
-
-# Complete Robot System
+# Complete Monitoring System
 
 <p align="center">
 <img src="Media/Complete Unit.webp" width="700">
 </p>
 
-The final system consists of a floating robotic platform equipped with sensors, wireless communication modules, and an IoT dashboard for monitoring environmental data.
+The final system consists of a monitoring unit installed on outdoor LED advertising panels with an IoT dashboard for real-time monitoring and fault detection.
 
 ---
 
@@ -60,24 +40,22 @@ The final system consists of a floating robotic platform equipped with sensors, 
 <img src="Media/system_architecture.webp" width="800">
 </p>
 
-The system architecture integrates hardware sensors, wireless communication, cloud data processing, and a real-time dashboard.
+The system architecture integrates sensing circuits, microcontroller processing, wireless communication, and a cloud monitoring dashboard.
 
 ### Hardware Components
 
-- ESP32 Microcontroller
-- TDS Sensor
-- DS18B20 Temperature Sensor
-- DHT11 Humidity Sensor
-- nRF24L01 Communication Module
-- Motorized Depth Winch System
+- ESP32 WROOM-32 Microcontroller
+- Current Transformer Sensors
+- PC817 Optocouplers
+- Power Monitoring Circuits
+- Relay Switching Interface
 
 ### Software Components
 
 - MQTT Communication
 - Telegraf Data Processing
 - InfluxDB Time-Series Database
-- React.js Web Dashboard
-- Grafana Visualization
+- React.js Monitoring Dashboard
 
 ---
 
@@ -87,28 +65,17 @@ The system architecture integrates hardware sensors, wireless communication, clo
 <img src="Media/Complete Prototype.webp" width="700">
 </p>
 
-The mechanical structure was designed using **SolidWorks** with a **catamaran hull design** to provide stability in water.
+The mechanical structure was designed using **SolidWorks** to create a **custom enclosure for the electronic control unit and PCB**. The enclosure protects the internal components from environmental conditions and provides a compact mounting solution for the sensors, communication modules, and power system.
 
 ### Key Mechanical Features
 
-- Twin hull PVC floating structure
-- Lightweight PLA mounting platform
-- Sensor deployment mechanism
-- Integrated motorized winch system
+- Custom enclosure for electronic PCB modules    
+- Protection for internal electronics  
+- Compact and durable design for field deployment
 
 ---
 
 # Circuit Design
-
-## Breadboard Prototype
-
-<p align="center">
-<img src="Media/breadboard_circuit.webp" width="700">
-</p>
-
-Initial circuit testing was performed on a **breadboard prototype** to verify sensor readings, ESP32 communication, and power distribution before PCB development.
-
----
 
 ## Circuit Diagram
 
@@ -116,29 +83,41 @@ Initial circuit testing was performed on a **breadboard prototype** to verify se
 <img src="Media/circuit_diagram.webp" width="750">
 </p>
 
-A custom electronic circuit was designed to integrate sensors, communication modules, and power management.
+The electronic system is based on the **ESP32 WROOM-32 microcontroller**, designed to monitor electrical parameters and control switching operations.
+
+The circuit integrates sensor interfaces, signal isolation, and power monitoring modules to ensure reliable data acquisition and safe system operation.
 
 ### Main Circuit Blocks
 
-- ESP32 control unit
-- Sensor interface circuits
-- Motor driver circuits
-- Wireless communication module
-- Voltage regulation system
+- ESP32 WROOM-32 Microcontroller
+- Current Transformer (CT) Sensors
+- PC817 Optocoupler Isolation Circuits
+- Power Monitoring and Signal Conditioning Circuits
+- Relay Switching Interface
+
+---
+
+## Breadboard Prototype
+
+<p align="center">
+<img src="Media/breadboard_circuit.webp" width="700">
+</p>
+
+Initial testing of the electronic system was performed using a **breadboard prototype** to validate sensor readings, microcontroller communication, and power monitoring functionality before designing the PCB.
 
 ---
 
 # PCB Layout Design
 
-The electronic system was implemented using **custom-designed PCBs**.
+The electronic system was implemented using **custom-designed PCBs** to integrate the microcontroller, sensor interfaces, and switching circuits into a compact and reliable hardware platform.
 
 ## Panelized PCB Layout (Top & Bottom)
 
 <p align="center">
-<img src="Media/PCB_top_and_bottom" width="750">
+<img src="Media/PCB_top_and_bottom.webp" width="750">
 </p>
 
-This layout shows the **panelized PCB design including both top and bottom layers** prepared for manufacturing.
+This image shows the **combined PCB layout including both top and bottom layers**, prepared for manufacturing.
 
 ---
 
@@ -148,7 +127,7 @@ This layout shows the **panelized PCB design including both top and bottom layer
 <img src="Media/PCB_Prtotype.webp" width="650">
 </p>
 
-Prototype PCBs were assembled and tested to validate circuit performance and sensor integration.
+Prototype PCBs were assembled to verify circuit functionality, signal isolation, and sensor interface operation.
 
 ---
 
@@ -158,41 +137,59 @@ Prototype PCBs were assembled and tested to validate circuit performance and sen
 <img src="Media/pcb_fabricated.jpg" width="650">
 </p>
 
-The final PCBs were fabricated using **FR4 double-layer boards**, ensuring durability and reliable electrical performance.
+The final PCBs were fabricated using **FR4 double-layer boards**, providing durability, improved signal integrity, and reliable long-term operation.
 
 ---
 
-# IoT Monitoring Dashboard
+# Web Monitoring Dashboard
+
+## System Monitoring Dashboard
 
 <p align="center">
 <img src="Media/Dashboard.webp" width="850">
 </p>
 
-The system includes a **real-time IoT dashboard** displaying sensor readings and historical environmental data.
+The system includes a **web-based monitoring dashboard** that displays the real-time status of all advertising billboard units deployed in the field.
+
+The dashboard visualizes the operational condition of each unit through an **interactive map interface built using the Leaflet open-source mapping library**. Each advertising unit is represented as a map marker that indicates the current system status and operational classification.
+
+Maintenance teams can quickly identify faulty units and perform required maintenance actions based on the map visualization.
 
 ### Dashboard Features
 
-- Live sensor monitoring
-- Historical data visualization
-- Water quality analysis
-- Remote monitoring capability
-- Data logging and reporting
+- Real-time monitoring of advertising billboard units  
+- Interactive map visualization using **Leaflet Open Source Map**  
+- System classification and status indication  
+- Maintenance monitoring and fault identification  
+- Remote monitoring through web interface  
 
 ---
 
-# System Unit
+## Advertising Unit Management
 
 <p align="center">
-<img src="Media/system_unit.webp" width="750">
+<img src="Media/unit_management.webp" width="850">
 </p>
 
-The robotic system integrates sensors, microcontrollers, wireless communication modules, and power systems into a compact floating platform.
+The system also includes an **Advertising Unit Management panel** that allows administrators to manage billboard units in the system.
+
+Through this interface, users can **add, edit, remove, and organize advertising units** that appear on the monitoring map.
+
+Units can be added either manually through the interface or by **importing CSV data files**, making it easy to register a large number of billboard locations.
+
+### Management Features
+
+- Add new advertising units  
+- Edit existing unit information  
+- Remove or deactivate units  
+- Bulk unit registration using **CSV file upload**  
+- Manual unit entry through the dashboard interface  
 
 ---
 
 # Live System Demo
 
-The monitoring dashboard can be accessed here:
+The web monitoring dashboard can be accessed here:
 
 🔗 **Live Demo**  
 https://wqc-web.web.app
@@ -204,18 +201,21 @@ https://wqc-web.web.app
 You can download the full research report here:
 
 📄 **Download Final Report**  
-[Download Report](Documents/Final%20Report.pdf)
+[Download Report](Documents/FinalReport.pdf)
 
 ---
 
 # Key Features
 
-- Autonomous water monitoring robot
-- Real-time IoT data transmission
-- Depth-based water sampling
-- Custom PCB electronics
-- Wireless sensor communication
-- Cloud-based data visualization
+- Real-time monitoring of outdoor LED advertising panels  
+- Automatic power failure detection
+- Interactive map visualization 
+- System classification and status indication  
+- Maintenance monitoring and fault identification  
+- Output switching fault detection  
+- IoT-based remote monitoring system  
+- Cloud data storage and visualization  
+- Scalable architecture for large deployments  
 
 ---
 
@@ -223,11 +223,9 @@ You can download the full research report here:
 
 ### Hardware
 
-- ESP32
-- nRF24L01
-- TDS Sensor
-- DS18B20 Temperature Sensor
-- DHT11 Sensor
+- ESP32 WROOM-32
+- Current Transformer Sensors
+- PC817 Optocouplers
 
 ### Software
 
@@ -236,12 +234,11 @@ You can download the full research report here:
 - Telegraf
 - InfluxDB
 - React.js
-- Grafana
 
 ### Design Tools
 
-- SolidWorks
 - Altium Designer
+- SolidWorks
 
 ---
 
@@ -260,7 +257,7 @@ Final Year Undergraduate Research Project
 Presented at **ASRITE Research Symposium**
 
 **Project Supervisor**  
-Eng. S.R.L. Gunawardhana
+Eng. 
 
 ---
 
