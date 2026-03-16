@@ -272,3 +272,8 @@ Electronics & Embedded Systems Developer
 Wayamba University of Sri Lanka
 
 ---
+
+# License
+
+This project is released for **educational and research purposes**.
+
