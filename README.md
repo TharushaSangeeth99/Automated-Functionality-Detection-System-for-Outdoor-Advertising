@@ -134,7 +134,7 @@ Prototype PCBs were assembled to verify circuit functionality, signal isolation,
 ## Fabricated PCB
 
 <p align="center">
-<img src="Media/pcb_fabricated.jpg" width="650">
+<img src="Media/pcb_fabricated.webp" width="650">
 </p>
 
 The final PCBs were fabricated using **FR4 double-layer boards**, providing durability, improved signal integrity, and reliable long-term operation.
