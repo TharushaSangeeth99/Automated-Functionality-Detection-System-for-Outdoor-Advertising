@@ -257,7 +257,10 @@ Final Year Undergraduate Research Project
 Presented at **ASRITE Research Symposium**
 
 **Project Supervisor**  
-Eng. 
+Mr. PGTR Payagala  
+Lecturer  
+Department of Electronics  
+Wayamba University of Sri Lanka
 
 ---
 
