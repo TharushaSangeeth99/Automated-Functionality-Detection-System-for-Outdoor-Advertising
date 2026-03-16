@@ -192,7 +192,7 @@ Units can be added either manually through the interface or by **importing CSV d
 The web monitoring dashboard can be accessed here:
 
 🔗 **Live Demo**  
-https://wqc-web.web.app
+https://afd-system.web.app
 
 ---
 
@@ -201,7 +201,7 @@ https://wqc-web.web.app
 You can download the full research report here:
 
 📄 **Download Final Report**  
-[Download Report](Documents/FinalReport.pdf)
+[Download Final Report](Documents/Final%20Report.pdf)
 
 ---
 
